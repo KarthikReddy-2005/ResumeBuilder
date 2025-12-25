@@ -59,23 +59,42 @@ const Dashboard = () => {
 
   const uploadResume = async (event) => {
     event.preventDefault();
+    if (!resume) {
+      toast.error("Please select a PDF file to upload.");
+      return;
+    }
     setIsLoading(true);
     try {
-      const resumeText = await pdfToText(resume);
-      const { data } = await api.post(
+      let resumeText;
+      try {
+        resumeText = await pdfToText(resume);
+        if (!resumeText || !resumeText.trim()) {
+          throw new Error("Empty text returned from PDF extraction.");
+        }
+      } catch (err) {
+        console.error("PDF extraction failed:", err);
+        toast.error(
+          "Failed to extract text from PDF. Try another file or use server-side upload."
+        );
+        setIsLoading(false);
+        return;
+      }
+
+      const { data } = await api.put(
         "/api/ai/upload-resume",
         { title, resumeText },
         { headers: { Authorization: `Bearer ${token}` } }
       );
+
       setTitle("");
       setResume(null);
       setShowUploadResume(false);
-
       navigate(`/app/builder/${data.resume._id}`);
     } catch (error) {
       toast.error(error?.response?.data?.message || error.message);
+    } finally {
+      setIsLoading(false);
     }
-    setIsLoading(false);
   };
   const deleteResume = async (resumeId) => {
     try {
