@@ -233,11 +233,11 @@ const Dashboard = () => {
                 type="text"
                 placeholder="Enter Resume title"
                 required
-                className="w-full px-4 py-2 mb-4 border border-slate-300 rounded focus:ring-2 focus:ring-green-600 focus:outline-none"
+                className="w-full px-4 py-2 mb-4 border border-slate-300 rounded focus:ring-2 focus:ring-orange-600 focus:outline-none"
               />
               <button
                 type="submit"
-                className="w-full py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors"
+                className="w-full py-2 bg-orange-600 text-white rounded hover:bg-orange-700 transition-colors"
               >
                 Create Resume
               </button>
@@ -270,7 +270,7 @@ const Dashboard = () => {
                 type="text"
                 placeholder="Enter Resume title"
                 required
-                className="w-full px-4 py-2 mb-4 border border-slate-300 rounded focus:ring-2 focus:ring-green-600 focus:outline-none"
+                className="w-full px-4 py-2 mb-4 border border-slate-300 rounded focus:ring-2 focus:ring-orange-600 focus:outline-none"
               />
 
               <div>
@@ -283,10 +283,10 @@ const Dashboard = () => {
 
                 <label
                   htmlFor="resume-input"
-                  className="flex flex-col items-center justify-center gap-2 border group text-slate-400 border-slate-400 border-dashed rounded-md p-4 py-10 my-6 hover:border-green-500 hover:text-green-700 cursor-pointer transition-colors"
+                  className="flex flex-col items-center justify-center gap-2 border group text-slate-400 border-slate-400 border-dashed rounded-md p-4 py-10 my-6 hover:border-orange-500 hover:text-orange-700 cursor-pointer transition-colors"
                 >
                   {resume ? (
-                    <p className="text-green-700">{resume.name}</p>
+                    <p className="text-orange-700">{resume.name}</p>
                   ) : (
                     <>
                       <UploadCloud className="size-14 stroke-1" />
@@ -307,7 +307,7 @@ const Dashboard = () => {
               <button
                 disabled={isLoading}
                 type="submit"
-                className="w-full py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
+                className="w-full py-2 bg-orange-600 text-white rounded hover:bg-orange-700 transition-colors flex items-center justify-center gap-2"
               >
                 {isLoading && (
                   <LoaderCircleIcon className="animate-spin size-4 text-white" />
@@ -343,11 +343,11 @@ const Dashboard = () => {
                 type="text"
                 placeholder="Enter Resume title"
                 required
-                className="w-full px-4 py-2 mb-4 border border-slate-300 rounded focus:ring-2 focus:ring-green-600 focus:outline-none"
+                className="w-full px-4 py-2 mb-4 border border-slate-300 rounded focus:ring-2 focus:ring-orange-600 focus:outline-none"
               />
               <button
                 type="submit"
-                className="w-full py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors"
+                className="w-full py-2 bg-orange-600 text-white rounded hover:bg-orange-700 transition-colors"
               >
                 Update
               </button>

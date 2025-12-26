@@ -11,8 +11,8 @@ const CallToAction = () => {
           Build a professional Resume That Helps You Stand Out Get Hired
         </p>
         <a
-          href="https://prebuiltui.com"
-          className="flex items-center gap-2 rounded py-3 px-8 bg-green-600 hover:bg-green-700 transition text-white"
+          href="/"
+          className="flex items-center gap-2 rounded py-3 px-8 bg-orange-600 hover:bg-orange-700 transition text-white"
         >
           <span>Get Started</span>
           <svg

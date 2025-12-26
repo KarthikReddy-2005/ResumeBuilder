@@ -46,7 +46,7 @@ const Testimonial = () => {
           <div className="flex items-center gap-1">
             <p>{card.name}</p>
             <svg
-              className="mt-0.5 text-green-500"
+              className="mt-0.5 text-orange-500"
               width="12"
               height="12"
               viewBox="0 0 12 12"
@@ -100,8 +100,8 @@ const Testimonial = () => {
       className="flex flex-col items-center my-10 scroll-mt-12"
     >
       {/* Section tag */}
-      <div className="flex items-center gap-2 text-sm text-green-600 bg-green-400/10 rounded-full px-6 py-1.5">
-        <BookUserIcon className="size-4.5 stroke-green-600" />
+      <div className="flex items-center gap-2 text-sm text-orange-600 bg-orange-400/10 rounded-full px-6 py-1.5">
+        <BookUserIcon className="size-4.5 stroke-orange-600" />
         <span>Testimonials</span>
       </div>
 

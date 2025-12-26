@@ -32,7 +32,7 @@ const ProjectForm = ({ data, onChange }) => {
         </div>
         <button
           onClick={addProject}
-          className="flex items-center gap-2 px-3 py-1 text-sm bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors"
+          className="flex items-center gap-2 px-3 py-1 text-sm bg-orange-100 text-orange-700 rounded-lg hover:bg-orange-200 transition-colors"
         >
           <Plus className="size-4" />
           Add Project

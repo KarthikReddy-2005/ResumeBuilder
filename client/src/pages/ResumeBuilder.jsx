@@ -155,7 +155,7 @@ const ResumeBuilder = () => {
               {/* Progress bar */}
               <hr className="absolute top-0 left-0 right-0 border-2 border-gray-200" />
               <hr
-                className="absolute top-0 left-0 h-1 bg-linear-to-r from-green-500 to-green-600 border-none transition-all duration-2000"
+                className="absolute top-0 left-0 h-1 bg-linear-to-r from-orange-500 to-orange-600 border-none transition-all duration-2000"
                 style={{
                   width: `${
                     (activeSectionIndex * 100) / (sections.length - 1)
@@ -283,7 +283,7 @@ const ResumeBuilder = () => {
                 onClick={() =>
                   toast.promise(saveResume(), { loading: "Saving..." })
                 }
-                className="bg-linear-to-br from-green-100 to-green-200 ring-green-300 text-green-600 ring hover:ring-green-400 transition-all rounded-md px-6 py-2 mt-6 text-sm"
+                className="bg-linear-to-br from-orange-100 to-orange-200 ring-orange-300 text-orange-600 ring hover:ring-orange-400 transition-all rounded-md px-6 py-2 mt-6 text-sm"
               >
                 Save Changes
               </button>
@@ -314,7 +314,7 @@ const ResumeBuilder = () => {
                 </button>
                 <button
                   onClick={downloadResume}
-                  className="flex items-center gap-2 px-6 py-2 text-xs bg-linear-to-br from-green-100 to-green-200 text-green-600 rounded-lg ring-green-300 hover:ring transition-colors"
+                  className="flex items-center gap-2 px-6 py-2 text-xs bg-linear-to-br from-orange-100 to-orange-200 text-orange-600 rounded-lg ring-orange-300 hover:ring transition-colors"
                 >
                   <DownloadIcon classname="size-4" />
                   Download
